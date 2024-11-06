@@ -7,6 +7,7 @@ import argparse
 import numpy as np
 import complexity
 import cv2
+import os
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--input_selection", default="", type=str, help="The path of dev set.")
@@ -77,6 +78,7 @@ for i in range(args.num_iter):
     if i%100==0:
         epoch_num_str=str(i)
         with torch.no_grad():
+            os.makedirs('./result_imgs/', exist_ok=True)
             save_img_tensor(image,"./result_imgs/image_cur_"+args.input_selection+"_"+args.distance_metric+"_"+str(args.lr)+"_bs"+str(args.bs)+epoch_num_str+"_"+".png")
 
     min_value = criterion(image0,image).mean(-1).mean(-1).mean(-1).min()
