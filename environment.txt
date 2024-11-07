@@ -1,0 +1,3 @@
+Python 3.10.12
+pip 24.3.1 from /home/cloud/.local/lib/python3.10/site-packages/pip (python 3.10)
+Linux jarvislabs-237582 5.15.0-113-generic #123-Ubuntu SMP Mon Jun 10 08:16:17 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux
